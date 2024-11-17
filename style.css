@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px; 
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+
+.container img {
+    max-width: 350px;
+    box-shadow: 0px 0px 8px grey;
+    border-radius: 8px;
+    transform-origin: center;
+    transform: perspective(800px) rotateY(20deg);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.container img:hover {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+.container:hover img {
+    opacity: 0.3;
+}
+
+.container img:hover {
+    opacity: 1;
+}
